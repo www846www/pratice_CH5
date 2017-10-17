@@ -11,15 +11,10 @@
 |
 */
 
-Route::get('dashboard', function () {
-    return 'dashboard';
-});
+Route::get('/', ['as' => 'home.index', 'uses' =>
+'Homecontroller@index']);
 
-Route::group(['prefix' => 'admin'], function(){
-    Route::get('dashboard', function(){
-        return 'admin dashboard';
-    });
-});
+
 
 
 
