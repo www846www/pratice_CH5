@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('say/{name?}', ['as' => 'hello.index', function ($name = 'Everybody') {
     return view('welcome');
-});
+}]);
 
-Route::get('hello/{name?}', function ($name = 'Everybody') {
+Route::get('hello/{name?}', ['as' => 'hello.index', function ($name = 'Everybody') {
     return 'Hello, '.$name;
-});
+}]);
+
+
