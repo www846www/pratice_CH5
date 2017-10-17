@@ -42,5 +42,4 @@
             </div>
         </div>
     </body>
-    <a href="{{ route('hello.index')}}">Hello</a>
 </html>
